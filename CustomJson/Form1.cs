@@ -44,8 +44,9 @@ namespace CustomJson
                 MySqlDataAdapter adupter = new MySqlDataAdapter(cmd);
                 DataTable table = new DataTable();
                 table.Load(cmd.ExecuteReader());
-                var rows = table.AsEnumerable().ToArray();
 
+                //Inserting data to DataTable as array
+                var rows = table.AsEnumerable().ToArray();
                 adupter.Fill(table);
                 
                 for (int i = 0; i < table.Rows.Count; i++)
