@@ -21,7 +21,7 @@ namespace CustomJson
 
     public class Header
     {
-        public string HotelName { get; set; }
+        public string MainName { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
         public string Address1 { get; set; }

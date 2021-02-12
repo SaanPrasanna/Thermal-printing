@@ -63,7 +63,7 @@ namespace CustomJson
                     GrandTotal = "1150.00",
                     CustomerInfo = new CustomerInfo { Address1 = "Address 1", Address2 = "Address 2", Phone = "01234456789" },
                     BillSummary = new List<BillSummary> { new BillSummary { key = "Shopping", value = "10.00" } },
-                    Header = new Header { HotelName = "Demo Name", Phone = "0123456789", Address = "මීගමු පාර‍,කුරුණැගල‍", City = "කුරුණෑගල", BillNo = "INVO0001", DateOfBill = "2020-02-20", FssaiNo = "12345678901234", GSTNo = "12345678901234", CustomerRemarksLine1 = "", OrderNote = "" },
+                    Header = new Header { MainName = "Demo Name", Phone = "0123456789", Address = "මීගමු පාර‍,කුරුණැගල‍", City = "කුරුණෑගල", BillNo = "INVO0001", DateOfBill = "2020-02-20", FssaiNo = "12345678901234", GSTNo = "12345678901234", CustomerRemarksLine1 = "", OrderNote = "" },
                     Items = totalItems,
                     //Canon TS200 series
                     Settings = new Settings { PrinterName = "Microsoft XPS Document Writer", PrinterType = "Default", ItemLength = 40, PrintLogo = true, ThankYouNote = "Thank you for choosing to order from us", EIDRMK = "Thank you", PrintType = "Cash" }
@@ -171,7 +171,7 @@ namespace CustomJson
                 sf.LineAlignment = StringAlignment.Center;
                 sf.Alignment = StringAlignment.Center;
 
-                graphic.DrawString(ReportData.Header.HotelName, new Font(pageSetting.PageSetting.HeaderCashFontName, pageSetting.PageSetting.HeaderCashFontSize, FontStyle.Bold), Brushes.Black, rect, sf);
+                graphic.DrawString(ReportData.Header.MainName, new Font(pageSetting.PageSetting.HeaderCashFontName, pageSetting.PageSetting.HeaderCashFontSize, FontStyle.Bold), Brushes.Black, rect, sf);
                 offset = offset + (int)fontHeight + 5;
                 if (ReportData.Header.Address != null)
                 {
