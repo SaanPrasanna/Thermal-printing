@@ -468,7 +468,6 @@ namespace CustomJson
             return offset;
         }
 
-
         //This function split item name into multiple lines depending upon length parameter
         public static string getStrSplit(string x, int length)
         {
@@ -490,7 +489,7 @@ namespace CustomJson
         {
             try
             {
-                string json = File.ReadAllText("temp.json");
+                string json = File.ReadAllText("temp.txt");
                 ReportData = JsonConvert.DeserializeObject<RootObject>(json);
                 CashReceipt();
             }
